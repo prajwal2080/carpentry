@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Northline Carpentry",
-  description: "Custom carpentry, trim, decks, and built-ins crafted for homes that deserve lasting quality.",
+  description:
+    "Custom carpentry, trim, decks, and built-ins with an easy booking form for consultations and project requests.",
 };
 
 export default function RootLayout({

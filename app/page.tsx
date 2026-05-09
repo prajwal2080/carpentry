@@ -1,3 +1,5 @@
+import BookingForm from "./booking-form";
+
 const services = [
   {
     title: "Custom built-ins",
@@ -109,10 +111,10 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#contact"
+                href="#booking"
                 className="inline-flex items-center justify-center rounded-full bg-stone-950 px-6 py-3 text-sm font-semibold text-stone-50 transition hover:bg-stone-800"
               >
-                Book a consultation
+                Book a visit
               </a>
               <a
                 href="#projects"
@@ -261,37 +263,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 pb-24 sm:px-8 lg:px-10">
-        <div className="grid gap-6 rounded-[2.25rem] border border-stone-900/10 bg-[linear-gradient(135deg,#3a271a_0%,#604128_55%,#8a5c34_100%)] p-8 text-stone-50 shadow-[0_28px_80px_rgba(54,33,16,0.32)] lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
+      <section id="booking" className="mx-auto max-w-7xl px-6 pb-24 sm:px-8 lg:px-10">
+        <div className="grid gap-6 rounded-[2.25rem] border border-stone-900/10 bg-[linear-gradient(135deg,#3a271a_0%,#604128_55%,#8a5c34_100%)] p-8 text-stone-50 shadow-[0_28px_80px_rgba(54,33,16,0.32)] lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-100/80">Get in touch</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-100/80">Book a consultation</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Tell us what you want to build, and we’ll help you make it real.
+              Pick a date and time that works, and we’ll confirm the details.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-stone-200">
-              Use this section for your phone number, email, and service area. It is set up to become your
-              main call to action and can be connected to a contact form later.
+              Use the form to request a consultation for built-ins, trim, decks, repairs, or a custom
+              project. We’ll follow up by phone or email to confirm availability.
             </p>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[1.5rem] bg-white/10 p-5 backdrop-blur-sm">
+                <p className="text-xs uppercase tracking-[0.28em] text-amber-100/75">Phone</p>
+                <a className="mt-2 block text-lg font-semibold text-stone-50" href="tel:+10000000000">
+                  (000) 000-0000
+                </a>
+              </div>
+              <div className="rounded-[1.5rem] bg-white/10 p-5 backdrop-blur-sm">
+                <p className="text-xs uppercase tracking-[0.28em] text-amber-100/75">Email</p>
+                <a className="mt-2 block text-lg font-semibold text-stone-50" href="mailto:hello@northlinecarpentry.com">
+                  hello@northlinecarpentry.com
+                </a>
+              </div>
+              <div className="rounded-[1.5rem] bg-white/10 p-5 backdrop-blur-sm sm:col-span-2">
+                <p className="text-xs uppercase tracking-[0.28em] text-amber-100/75">Service area</p>
+                <p className="mt-2 text-lg font-semibold text-stone-50">Your city and surrounding neighborhoods</p>
+              </div>
+            </div>
           </div>
 
-          <div className="grid gap-4 rounded-[1.75rem] bg-white/10 p-6 backdrop-blur-sm">
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-amber-100/75">Phone</p>
-              <a className="mt-2 block text-lg font-semibold text-stone-50" href="tel:+10000000000">
-                (000) 000-0000
-              </a>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-amber-100/75">Email</p>
-              <a className="mt-2 block text-lg font-semibold text-stone-50" href="mailto:hello@northlinecarpentry.com">
-                hello@northlinecarpentry.com
-              </a>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-amber-100/75">Service area</p>
-              <p className="mt-2 text-lg font-semibold text-stone-50">Your city and surrounding neighborhoods</p>
-            </div>
-          </div>
+          <BookingForm />
         </div>
       </section>
     </main>
